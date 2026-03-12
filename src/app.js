@@ -1,7 +1,12 @@
-const express=require("express");
-const songRoute=require("./router/songs.router")
+const express = require("express");
+const songRoute = require("./router/songs.router");
 
-const app=express();
-app.use("/",songRoute);
+const app = express();
 
-module.exports=app;
+app.get("/", (req, res) => {
+  res.send("Facial Expression Music API is running 🚀");
+});
+
+app.use("/songs", songRoute);
+
+module.exports = app;
