@@ -7,6 +7,6 @@ app.get("/", (req, res) => {
   res.send("Facial Expression Music API is running 🚀");
 });
 
-app.use("/songs", songRoute);
+app.use("/api", songRoute);
 
 module.exports = app;
